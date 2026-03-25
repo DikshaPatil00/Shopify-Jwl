@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emergency Cases</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container wide-card">     
+        <h2>Emergency Cases</h2>
+        {% if emergencies %}
+        <div class="table-responsive">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Symptoms</th>
+                        <th>Reason</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for e in emergencies %}
+                    <tr>
+                        <td>{{ e.user_name }}</td>
+                        <td>{{ e.email }}</td>
+                        <td>{{ e.symptom_names }}</td>
+                        <td style="color:red; font-weight:bold;">{{ e.emergency_message }}</td>
+                        <td><span class="status-badge yes">{{ e.emergency_level }}</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="no-data">No emergency cases found.</p>
+        {% endif %}
+        <div class="footer-links">
+            <a href="/admin/dashboard">← Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

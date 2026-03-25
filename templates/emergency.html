@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emergency Alert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container Alert-card">
+<h2 class="emergency-title">Emergency Alert</h2><br>
+
+<div class="Alert-content">
+<p class="critical-text">
+    Your symptoms indicate a critical condition.
+</p>
+
+{% if reason %}
+<p class="reason-text">
+    <strong>Reason:</strong> {{ reason }}
+</p>
+{% endif %}
+
+<p>
+    Please consult a doctor or visit the nearest hospital immediately.
+</p>
+
+<div class="Helpline-box">
+    Emergency Helpline: 108 (India)
+</div>
+</div><br>
+
+<a href="/user/dashboard">Back to Dashboard</a>
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #007bff 0%, #00d2ff 50%, #17ead9 100%);
+    --btn-gradient: linear-gradient(to right, #17ead9, #6078ea);
+    --accent-blue: #0099cc;
+    --border-color: #00d2ff;
+    --text-dark: #333;
+    --text-light: #777;
+    --error-red: #ff4d4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--text-dark);
+}
+
+.container, 
+.page, 
+.emergency-box {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.wide-card {
+    max-width: 850px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: var(--accent-blue);
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    
+}
+
+
+h3 {
+    color: #444;
+    font-size: 18px;
+    margin: 20px 0 15px 0;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+label {
+    font-size: 13px;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid var(--border-color);
+    padding: 10px 0;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+    transition: border-color 0.3s;
+    margin-bottom: 5px;
+}
+
+input:focus {
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+button, 
+.btn-primary, 
+.btn-primary-link {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: var(--btn-gradient);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent-blue);
+    color: var(--accent-blue);
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background: #f8f9fa;
+    color: var(--accent-blue);
+    padding: 12px;
+    text-align: left;
+    font-size: 13px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    text-align: left;
+}
+
+.emergency-title {
+    color: var(--error-red) !important;
+}
+
+.helpline-box {
+    background: #fff5f5;
+    padding: 15px;
+    border: 1px dashed var(--error-red);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.admin-links {
+    list-style: none;
+    text-align: left;
+}
+
+.admin-links li a {
+    display: block;
+    padding: 12px;
+    background: #f8f9fa;
+    color: var(--accent-blue);
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-blue);
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.status-badge.yes {
+    background: #ffebeb;
+    color: var(--error-red);
+}
+
+.status-badge.no {
+    background: #ebfffa;
+    color: #00cc99;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+     filter: brightness(1.1);
+}
+
+
+body {
+    background:
+        linear-gradient(
+            rgba(245, 249, 255, 0.85),
+            rgba(245, 249, 255, 0.85)
+        ),
+        url("/static/images/medical-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.btn-danger {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-danger:hover {
+    background: #e60000;
+}
+

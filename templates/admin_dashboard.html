@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container"> 
+        <h2>Admin Dashboard</h2><br>
+
+        <div class="button-group">
+            <a href="/admin/users" class="btn-primary-link">View Users</a>
+            <a href="/admin/records" class="btn-primary-link">View User Records</a>
+            <a href="/admin/emergency-cases" class="btn-primary-link">View Emergency Cases</a>
+            <a href="/logout" class="btn-primary-link" style="background: #ff4d4d; border: none;">Logout</a>
+        </div>
+    </div>   
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Symptom Analyser</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+        <div class="brand">
+            <span>Symptom Analyser</span>
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about" class="active">About</a>
+            <a href="/login">User Login</a>
+            <a href="/register">User Register</a>
+            <a class="admin" href="/admin/login">Admin Login</a>
+        </nav>
+    </div>
+</header>
+
+<section class="about-section">
+    <div class="about-container">
+        <h1>About Symptom Analyser & Advisory System</h1>
+
+        <p>
+            The <strong>Symptom Analyser & Advisory System</strong> is a web-based
+            healthcare support system designed to assist users in identifying
+            possible health conditions based on symptoms entered by them.
+        </p>
+
+        <p>
+            The system analyzes the selected symptoms and provides
+            appropriate medical advice. In case of severe or emergency symptoms,
+            the system immediately alerts the user and suggests seeking
+            professional medical help.
+        </p>
+
+        <p>
+            This system is developed as an academic project with the aim of
+            improving healthcare awareness and providing quick preliminary
+            guidance to users.
+        </p>
+    </div>
+</section>
+
+</body>
+</html>

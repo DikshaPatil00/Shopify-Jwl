@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Health Records</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container wide-card">     
+        <h2>User Health Records</h2>
+        {% if records %}
+        <div class="table-responsive">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Symptom</th>
+                        <th>Temp</th>
+                        <th>Severity</th>
+                        <th>Medicine</th>
+                        <th>Diet</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in records %}
+                    <tr>
+                        <td><strong>{{ r.name }}</strong></td>
+                        <td>{{ r.symptom_name }}</td>
+                        <td>{{ r.temperature }}°C</td>
+                        <td>{{ r.severity }}</td>
+                        <td>{{ r.medicine }}</td>
+                        <td>{{ r.diet }}</td>
+                        <td>{{ r.date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="no-data">No records found.</p>
+        {% endif %}
+        <div class="footer-links">
+            <a href="/admin/dashboard">← Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

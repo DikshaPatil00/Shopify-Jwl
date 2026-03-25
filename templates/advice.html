@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Advice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container advice-card">    
+        <h2>Your Health Advice</h2>
+        {% if advice %}
+            <div class="advice-content">
+                <h3>Symptom: {{ advice.symptom_name }}</h3>
+                <p><strong>Home Remedy:</strong> {{ advice.remedy }}</p>
+                <p><strong>Medicine:</strong> {{ advice.medicine }}</p>
+                <p><strong>Diet:</strong> {{ advice.diet }}</p>
+                <p><strong>Water Intake:</strong> {{ advice.water_intake }}</p>
+            </div>
+        {% else %}
+            <p class="no-data">No advice available for this symptom.</p>
+        {% endif %}
+        <div class="footer-links">
+            <a href="/user/dashboard">← Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>
